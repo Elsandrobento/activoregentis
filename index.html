@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="ActivoRegentis - Conhecimento que Orienta Decisões. Apresentação institucional premium sobre Direito, Mercado de Capitais e Governação Corporativa.">
+    <meta name="theme-color" content="#000c1a">
+    <title>ActivoRegentis - Apresentação Executiva Premium</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="pptxgen.bundle.js"></script>
+</head>
+<body>
+
+    <!-- Action Buttons Bar -->
+    <div class="action-buttons-container" id="actionBar">
+        <button class="btn-action" id="btnPDF" title="Descarregar PDF">
+            <span class="btn-icon">⬇</span><span class="btn-label">PDF</span>
+        </button>
+        <button class="btn-action" id="btnPPTX" title="Descarregar PPTX">
+            <span class="btn-icon">⬇</span><span class="btn-label">PPTX</span>
+        </button>
+        <button class="btn-action btn-primary" id="btnFullscreen" title="Apresentar em Ecrã Inteiro">
+            <span class="btn-icon">⛶</span><span class="btn-label">Apresentar</span>
+        </button>
+    </div>
+
+    <!-- Canvas Animated Background -->
+    <canvas class="bg-canvas" id="bgCanvas"></canvas>
+    <div class="bg-radial"></div>
+    <div class="bg-grid"></div>
+
+    <!-- Main Deck Container -->
+    <div class="deck-container">
+
+        <!-- ═══════════════════════════════════════ -->
+        <!-- SLIDE 1: CAPA                           -->
+        <!-- ═══════════════════════════════════════ -->
+        <section class="slide slide-cover active" id="slide1" aria-label="Capa">
+            <div class="cover-inner">
+                <img src="logo.png" alt="ActivoRegentis — Logótipo oficial" class="brand-logo-img">
+                <div class="cover-divider"></div>
+                <p class="cover-tagline">Direito &bull; Mercado de Capitais &bull; Governação Corporativa</p>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════ -->
+        <!-- SLIDE 2: A NOSSA ESSÊNCIA               -->
+        <!-- ═══════════════════════════════════════ -->
+        <section class="slide" id="slide2" aria-label="A Nossa Essência">
+            <div class="slide-header">
+                <h2 class="slide-title gold-gradient-text">A Nossa Essência</h2>
+                <span class="slide-category">Institucional</span>
+            </div>
+            <div class="panel">
+                <p class="panel-lead">
+                    A <strong>ActivoRegentis</strong> é uma plataforma de produção e partilha de conhecimento especializada na interseção estratégica de três pilares fundamentais:
+                </p>
+                <div class="pilar-container">
+                    <div class="card">
+                        <div class="card-icon">⚖</div>
+                        <h3>Direito</h3>
+                        <p>O enquadramento legal que assegura a solidez e a legitimidade das operações.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">📈</div>
+                        <h3>Mercado de Capitais</h3>
+                        <p>O dinamismo financeiro, investimento e eficiência na alocação de recursos.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🏛</div>
+                        <h3>Governação Corporativa</h3>
+                        <p>Os princípios éticos, a transparência e as melhores práticas de liderança.</p>
+                    </div>
+                </div>
+                <p class="panel-footnote">
+                    Produzimos conteúdos que ajudam profissionais e instituições a tomar decisões mais informadas, estratégicas e sustentáveis.
+                </p>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════ -->
+        <!-- SLIDE 3: O SIGNIFICADO DO NOME          -->
+        <!-- ═══════════════════════════════════════ -->
+        <section class="slide" id="slide3" aria-label="Significado do Nome">
+            <div class="slide-header">
+                <h2 class="slide-title gold-gradient-text">O Significado do Nome</h2>
+                <span class="slide-category">Identidade</span>
+            </div>
+            <div class="panel">
+                <div class="meaning-container">
+                    <div class="meaning-col">
+                        <h3>ACTIVO</h3>
+                        <ul>
+                            <li>Ativos e Investimentos</li>
+                            <li>Capital produtivo</li>
+                            <li>Participação ativa no mercado</li>
+                            <li>Dinamismo dos mercados financeiros</li>
+                        </ul>
+                    </div>
+                    <div class="meaning-sep">
+                        <span class="meaning-plus">&amp;</span>
+                    </div>
+                    <div class="meaning-col">
+                        <h3>REGENTIS</h3>
+                        <p class="meaning-latin">Do latim &ldquo;Regens&rdquo;</p>
+                        <ul>
+                            <li>Orientar com rigor</li>
+                            <li>Estruturar o futuro</li>
+                            <li>Dar direção clara</li>
+                            <li>Liderar com princípios</li>
+                        </ul>
+                    </div>
+                </div>
+                <blockquote class="meaning-footer">
+                    &ldquo;ActivoRegentis representa a união perfeita entre a realidade dos mercados e a orientação estratégica baseada no conhecimento.&rdquo;
+                </blockquote>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════ -->
+        <!-- SLIDE 4: A NOSSA MISSÃO                 -->
+        <!-- ═══════════════════════════════════════ -->
+        <section class="slide" id="slide4" aria-label="A Nossa Missão">
+            <div class="slide-header">
+                <h2 class="slide-title gold-gradient-text">A Nossa Missão</h2>
+                <span class="slide-category">Propósito</span>
+            </div>
+            <div class="panel panel-centered">
+                <div class="highlight-quote">
+                    &ldquo;Promover uma cultura de <span class="highlight-quote-span">rigor</span>, <span class="highlight-quote-span">integridade</span> e <span class="highlight-quote-span">excelência</span> na interseção entre o direito, o mercado de capitais e a governação corporativa, através da produção e partilha de conhecimento técnico que gera valor real para profissionais, instituições e para o sistema financeiro.&rdquo;
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════ -->
+        <!-- SLIDE 5: A NOSSA VISÃO                  -->
+        <!-- ═══════════════════════════════════════ -->
+        <section class="slide" id="slide5" aria-label="A Nossa Visão">
+            <div class="slide-header">
+                <h2 class="slide-title gold-gradient-text">A Nossa Visão</h2>
+                <span class="slide-category">Futuro</span>
+            </div>
+            <div class="panel">
+                <p class="panel-lead">
+                    Ser uma plataforma de referência, contribuindo ativamente para:
+                </p>
+                <div class="vision-grid">
+                    <div class="vision-card">
+                        <h3>Melhor qualidade das decisões</h3>
+                        <p>Informação estruturada e análises profundas para mitigar riscos corporativos.</p>
+                    </div>
+                    <div class="vision-card">
+                        <h3>Evolução regulatória</h3>
+                        <p>Contribuir para o debate público e técnico sobre novas normas jurídicas e financeiras.</p>
+                    </div>
+                    <div class="vision-card">
+                        <h3>Melhores práticas institucionais</h3>
+                        <p>Elevar o nível ético e operacional da governação nos conselhos de administração.</p>
+                    </div>
+                    <div class="vision-card">
+                        <h3>Fortalecimento do sistema financeiro</h3>
+                        <p>Fomentar um ecossistema mais transparente, eficiente e atrativo para os investidores.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════ -->
+        <!-- SLIDE 6: OS NOSSOS VALORES              -->
+        <!-- ═══════════════════════════════════════ -->
+        <section class="slide" id="slide6" aria-label="Os Nossos Valores">
+            <div class="slide-header">
+                <h2 class="slide-title gold-gradient-text">Os Nossos Valores</h2>
+                <span class="slide-category">Princípios</span>
+            </div>
+            <div class="values-grid">
+                <div class="value-item">
+                    <div class="value-icon">§</div>
+                    <h3>Rigor</h3>
+                    <p>Profundidade técnica, base legal sólida e precisão conceptual em cada publicação.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">✔</div>
+                    <h3>Integridade</h3>
+                    <p>Transparência total, independência intelectual e compromisso ético inabalável.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">★</div>
+                    <h3>Excelência</h3>
+                    <p>Melhoria contínua, qualidade profissional de topo e referência técnica.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">➤</div>
+                    <h3>Impacto</h3>
+                    <p>Influenciar decisões estratégicas, melhorar práticas e fortalecer instituições.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════ -->
+        <!-- SLIDE 7: ÁREAS DE ACTUAÇÃO              -->
+        <!-- ═══════════════════════════════════════ -->
+        <section class="slide" id="slide7" aria-label="Áreas de Actuação">
+            <div class="slide-header">
+                <h2 class="slide-title gold-gradient-text">Áreas de Actuação</h2>
+                <span class="slide-category">Foco</span>
+            </div>
+            <div class="panel">
+                <div class="list-grid">
+                    <div class="list-item">Direito</div>
+                    <div class="list-item">Mercado de Capitais</div>
+                    <div class="list-item">Governação Corporativa</div>
+                    <div class="list-item">Compliance</div>
+                    <div class="list-item">Regulação Financeira</div>
+                    <div class="list-item">Gestão de Risco</div>
+                    <div class="list-item">Sustentabilidade Institucional</div>
+                    <div class="list-item">Tomada de Decisão Estratégica</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════ -->
+        <!-- SLIDE 8: O QUE PRODUZIMOS               -->
+        <!-- ═══════════════════════════════════════ -->
+        <section class="slide" id="slide8" aria-label="O Que Produzimos">
+            <div class="slide-header">
+                <h2 class="slide-title gold-gradient-text">O Que Produzimos</h2>
+                <span class="slide-category">Conteúdos</span>
+            </div>
+            <div class="panel">
+                <div class="list-grid">
+                    <div class="list-item">Artigos Técnicos</div>
+                    <div class="list-item">Análises Jurídicas</div>
+                    <div class="list-item">Insights de Mercado</div>
+                    <div class="list-item">Conteúdo Educativo</div>
+                    <div class="list-item">Opiniões Especializadas</div>
+                    <div class="list-item">Comentários Regulatórios</div>
+                    <div class="list-item">Tendências de Governação</div>
+                    <div class="list-item">Estudos e Reflexões</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════ -->
+        <!-- SLIDE 9: PRESENÇA DIGITAL               -->
+        <!-- ═══════════════════════════════════════ -->
+        <section class="slide" id="slide9" aria-label="Presença Digital">
+            <div class="slide-header">
+                <h2 class="slide-title gold-gradient-text">Presença Digital</h2>
+                <span class="slide-category">Canais</span>
+            </div>
+            <div class="panel">
+                <p class="panel-lead">A ActivoRegentis posiciona-se como uma plataforma digital de referência no ecossistema lusófono.</p>
+                <div class="channels-container">
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener" class="channel-card">
+                        <span class="channel-icon">📣</span>
+                        <span class="channel-name">Facebook</span>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener" class="channel-card">
+                        <span class="channel-icon">📷</span>
+                        <span class="channel-name">Instagram</span>
+                    </a>
+                    <a href="https://www.linkedin.com" target="_blank" rel="noopener" class="channel-card">
+                        <span class="channel-icon">💼</span>
+                        <span class="channel-name">LinkedIn</span>
+                    </a>
+                </div>
+                <div class="digital-footer">
+                    Website Oficial: <a href="http://www.activoregentis.com" target="_blank" rel="noopener" class="link-gold">www.activoregentis.com</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════ -->
+        <!-- SLIDE 10: PÚBLICO-ALVO                  -->
+        <!-- ═══════════════════════════════════════ -->
+        <section class="slide" id="slide10" aria-label="Público-Alvo">
+            <div class="slide-header">
+                <h2 class="slide-title gold-gradient-text">Público-Alvo</h2>
+                <span class="slide-category">Destinatários</span>
+            </div>
+            <div class="panel">
+                <p class="panel-lead">Levamos conhecimento especializado para moldar o futuro profissional e institucional:</p>
+                <div class="target-grid">
+                    <div class="target-card">Profissionais do Direito</div>
+                    <div class="target-card">Administradores</div>
+                    <div class="target-card">Conselheiros de Administração</div>
+                    <div class="target-card">Investidores</div>
+                    <div class="target-card">Reguladores</div>
+                    <div class="target-card">Instituições Financeiras</div>
+                    <div class="target-card">Empresas</div>
+                    <div class="target-card">Académicos</div>
+                    <div class="target-card">Estudantes</div>
+                    <div class="target-card">Mercado de Capitais</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════ -->
+        <!-- SLIDE 11: O NOSSO DIFERENCIAL           -->
+        <!-- ═══════════════════════════════════════ -->
+        <section class="slide" id="slide11" aria-label="O Nosso Diferencial">
+            <div class="slide-header">
+                <h2 class="slide-title gold-gradient-text">O Nosso Diferencial</h2>
+                <span class="slide-category">Valor</span>
+            </div>
+            <div class="panel panel-centered">
+                <p class="diferencial-intro">A ActivoRegentis não comunica apenas informação.</p>
+                <div class="diferencial-statements">
+                    <p>Transformamos <span class="gold-gradient-text">Conhecimento</span> em Orientação.</p>
+                    <p>Análise em <span class="gold-gradient-text">Decisão</span>.</p>
+                    <p>Experiência em <span class="gold-gradient-text">Valor</span>.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════ -->
+        <!-- SLIDE 12: A ASSINATURA DO PROJECTO      -->
+        <!-- ═══════════════════════════════════════ -->
+        <section class="slide" id="slide12" aria-label="A Assinatura do Projecto">
+            <div class="slide-header">
+                <h2 class="slide-title gold-gradient-text">A Assinatura do Projecto</h2>
+                <span class="slide-category">Visão</span>
+            </div>
+            <div class="panel">
+                <div class="sig-container">
+                    <div class="sig-text">
+                        <p><strong>ActivoRegentis é mais do que uma marca corporativa.</strong></p>
+                        <p>É a materialização de uma visão estratégica robusta, construída ao longo de décadas de experiência de excelência nos mercados e no meio jurídico.</p>
+                        <p>Representa o ponto de fusão ideal onde o conhecimento e a responsabilidade criam impacto sustentável no mercado moderno.</p>
+                    </div>
+                    <div class="sig-keywords">
+                        <div class="sig-keyword">Mercado</div>
+                        <div class="sig-keyword">Direito</div>
+                        <div class="sig-keyword">Governação</div>
+                        <div class="sig-keyword">Conhecimento</div>
+                        <div class="sig-keyword">Responsabilidade</div>
+                        <div class="sig-keyword">Impacto</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════ -->
+        <!-- SLIDE 13: ENCERRAMENTO                  -->
+        <!-- ═══════════════════════════════════════ -->
+        <section class="slide slide-cover" id="slide13" aria-label="Encerramento">
+            <div class="cover-inner">
+                <img src="logo.png" alt="ActivoRegentis — Logótipo oficial" class="brand-logo-img">
+                <div class="cover-divider"></div>
+                <p class="cover-tagline" style="max-width: 520px;">
+                    Contribuindo para decisões mais sólidas, instituições mais fortes e mercados mais sustentáveis.
+                </p>
+                <div class="cover-links">
+                    <a href="http://www.activoregentis.com" target="_blank" rel="noopener" class="link-gold">www.activoregentis.com</a>
+                    <span class="cover-sep">|</span>
+                    <span>LinkedIn</span>
+                    <span class="cover-sep">|</span>
+                    <span>Facebook</span>
+                    <span class="cover-sep">|</span>
+                    <span>Instagram</span>
+                </div>
+            </div>
+        </section>
+
+    </div><!-- /.deck-container -->
+
+    <!-- Navigation Footer -->
+    <footer class="nav-footer">
+        <div class="brand-mini">ACTIVOREGENTIS</div>
+        <div class="progress-bar-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <div class="controls">
+            <button class="btn-nav" id="prevBtn" aria-label="Slide anterior">&larr;</button>
+            <span class="slide-counter"><span id="currentSlideNum">1</span> / <span id="totalSlidesNum">13</span></span>
+            <button class="btn-nav" id="nextBtn" aria-label="Próximo slide">&rarr;</button>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
