@@ -2,8 +2,7 @@
    ACTIVOREGENTIS — Presentation Stylesheet
    Corporate Premium | Mobile-First Design
    ============================================ */
-
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
 
 /* ── Custom Properties ─────────────────────── */
 :root {
@@ -21,7 +20,7 @@
 
     --border: rgba(197, 160, 89, 0.2);
 
-    --font-serif: 'Cinzel', 'Playfair Display', serif;
+    --font-serif: 'Playfair Display', serif;
     --font-sans:  'Montserrat', sans-serif;
 
     --slide-transition: 0.75s;
@@ -829,10 +828,124 @@ h1, h2, h3 { font-family: var(--font-serif); font-weight: 500; }
     }
 
     .card, .value-item, .vision-card, .meaning-col,
-    .list-item, .channel-card, .target-card, .sig-keyword {
+    .list-item, .channel-card, .target-card, .sig-keyword, .kpi-card-modern, .box-old, .box-new {
         opacity: 1 !important;
         transform: none !important;
     }
+}
+
+/* ── Modern V2 Grid ────────────────────────── */
+.kpi-grid-modern {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.kpi-card-modern {
+    background: var(--bg-card);
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    border: 1px solid var(--border);
+    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+    backdrop-filter: blur(8px);
+}
+
+.kpi-card-modern:hover {
+    transform: translateY(-8px);
+    border-color: var(--gold);
+    box-shadow: 0 10px 25px rgba(197,160,89,.15);
+}
+
+.kpi-title {
+    font-size: 0.95rem;
+    color: var(--gold-light);
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.kpi-value {
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    color: var(--text-primary);
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    line-height: 1.2;
+}
+
+.kpi-desc {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* ── Comparison Grid (V2) ──────────────────── */
+.comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.box-old, .box-new {
+    padding: 1.8rem;
+    border-radius: 8px;
+    background: rgba(0, 18, 41, 0.5);
+    border: 1px solid var(--border);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.box-old {
+    border-left: 4px solid #666;
+}
+
+.box-new {
+    border-left: 4px solid var(--gold);
+    background: rgba(197, 160, 89, 0.08);
+}
+
+.box-old h3, .box-new h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.box-old h3 { color: #aaa; }
+.box-new h3 { color: var(--gold-light); }
+
+.box-old ul, .box-new ul {
+    list-style: none;
+    padding: 0;
+}
+
+.box-old li, .box-new li {
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: flex-start;
+}
+
+.box-old li::before {
+    content: "✕";
+    color: #666;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.box-new li {
+    color: var(--text-primary);
+}
+
+.box-new li::before {
+    content: "✓";
+    color: var(--gold);
+    margin-right: 10px;
+    font-weight: bold;
 }
 
 /* ============================================
